@@ -1,0 +1,29 @@
+<div class="buscador-container">
+
+  <div class="search-bar-wrapper">
+    <span class="search-icon"></span>
+    <input
+      type="text"
+      placeholder="Buscar juegos, consolas, accesorios..."
+      (input)="onInput($event)"
+      class="search-input"
+    />
+  </div>
+
+  <div class="categorias-wrapper">
+    <div
+      class="categoria-item"
+      [class.activa]="categoriaActiva === null"
+      (click)="seleccionarCategoria(null)">
+      <span>Todas</span>
+    </div>
+
+    <div
+      *ngFor="let cat of categorias"
+      class="categoria-item"
+      [class.activa]="categoriaActiva === cat.id"
+      (click)="seleccionarCategoria(cat.id)">
+      <span>{{ cat.nombre }}</span>
+    </div>
+  </div>
+</div>

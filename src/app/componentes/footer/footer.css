@@ -1,0 +1,33 @@
+.footer-container {
+  background: #0a0a1a;
+  padding: 28px 20px 22px;
+  text-align: center;
+}
+
+.footer-linea {
+  height: 2px;
+  width: 100%;
+  margin-bottom: 22px;
+  background: linear-gradient(90deg, transparent, #00f6ff, #ff2ec4, transparent);
+  box-shadow: 0 0 8px rgba(0, 246, 255, 0.5);
+}
+
+.footer-marca {
+  font-family: 'Audiowide', sans-serif;
+  font-size: 1.1rem;
+  color: #00f6ff;
+  text-shadow: 0 0 6px rgba(0, 246, 255, 0.6);
+  margin: 0 0 6px;
+}
+
+.footer-marca .destacado { color: #ff2ec4; text-shadow: 0 0 6px rgba(255, 46, 196, 0.6); }
+
+.footer-texto {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.9rem;
+  color: #8b91b8;
+  margin: 3px 0;
+}
+
+.footer-datos { display: flex; justify-content: center; gap: 10px; margin-top: 4px; }
+.footer-sep { color: #3a3a5c; }

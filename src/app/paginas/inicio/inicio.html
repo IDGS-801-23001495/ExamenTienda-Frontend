@@ -1,0 +1,30 @@
+<div class="inicio-container">
+
+  <section class="banner-section">
+    <div class="banner-box">
+      <span class="banner-eyebrow">// NUEVOS LANZAMIENTOS</span>
+      <h1 class="banner-titulo">Entra a la <span class="glitch">Zone</span></h1>
+      <p class="banner-sub">Los mejores juegos y coleccionables, directo al punto de respawn</p>
+    </div>
+  </section>
+
+  <section class="productos-destacados">
+    <h2 class="seccion-titulo">Destacados</h2>
+    <div class="productos-grid">
+
+      <div *ngFor="let prod of productosPrincipales; let i = index"
+           class="producto-card"
+           [class.acento-cian]="i % 3 === 0"
+           [class.acento-magenta]="i % 3 === 1"
+           [class.acento-purpura]="i % 3 === 2">
+        <div class="img-placeholder">
+          <img [src]="'/' + prod.imagen" alt="{{ prod.nombre }}" class="img-real" onerror="this.style.display='none'"/>
+          <span class="placeholder-icon">🎮</span>
+        </div>
+        <p class="producto-titulo">{{ prod.nombre }}</p>
+      </div>
+
+    </div>
+  </section>
+
+</div>

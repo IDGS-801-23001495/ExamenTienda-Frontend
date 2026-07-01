@@ -1,0 +1,29 @@
+<div class="listado-container">
+  <div class="productos-grid">
+
+    <div *ngIf="productos.length === 0" class="no-productos">
+      <span class="no-icon">👾</span>
+      <p>No se encontraron productos que coincidan.</p>
+    </div>
+
+    <div *ngFor="let prod of productos; let i = index"
+         class="producto-card"
+         [class.acento-cian]="i % 3 === 0"
+         [class.acento-magenta]="i % 3 === 1"
+         [class.acento-purpura]="i % 3 === 2">
+      <div class="producto-img-box">
+        <img [src]="'' + prod.imagen" alt="{{ prod.nombre }}" class="img-real" onerror="this.style.display='none'"/>
+        <span class="placeholder-icon">🎮</span>
+      </div>
+      <div class="producto-info">
+        <h3>{{ prod.nombre }}</h3>
+        <p class="desc">{{ prod.descripcion }}</p>
+        <div class="info-footer">
+          <p class="precio">${{ prod.precio | number:'1.2-2' }}</p>
+          <span class="tag-categoria">{{ prod.categoria?.nombre }}</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

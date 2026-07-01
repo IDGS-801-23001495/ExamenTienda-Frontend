@@ -1,0 +1,12 @@
+<div class="productos-pagina-container">
+
+<app-buscador
+    [categorias]="categorias"
+    (alBuscar)="onBuscar($event)"
+    (alCambiarCategoria)="onFiltrarCategoria($event)">
+  </app-buscador>
+
+  <app-listado-productos
+    [productos]="productosFiltrados">
+  </app-listado-productos>
+</div>
